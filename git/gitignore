@@ -1,0 +1,32 @@
+# CakePHP
+config/app_paths.php
+config/app_permissions.php
+config/database.php
+tmp/*
+
+# komodo
+*.kpf
+*.komodoproject
+.komodotools
+
+# netbeans
+nbproject
+
+# subversion
+.svn
+
+# misc
+*.diff
+*.err
+*.orig
+*.log
+*.reg
+*.swo
+*.swp
+*.vi
+*~
+.DS_Store
+.cache
+.project
+.settings
+
