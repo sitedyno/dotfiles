@@ -10,7 +10,7 @@ set number
 " let mapleader = "\\"
 
 " set the colorscheme
-colorscheme desertEx
+colorscheme desertEx-cb
 
 " filetype detection
 if has("autocmd")
