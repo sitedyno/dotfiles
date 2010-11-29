@@ -1,9 +1,18 @@
+" load pathogen
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" display line numbers
 set number
 
+" set the mapleader key
+" let mapleader = "\\"
+
+" set the colorscheme
+colorscheme desertEx
+
+" filetype detection
 if has("autocmd")
-  filetype plugin indent on
+	filetype plugin indent on
 endif
