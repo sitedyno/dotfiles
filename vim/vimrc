@@ -16,3 +16,6 @@ colorscheme desertEx-cb
 if has("autocmd")
 	filetype plugin indent on
 endif
+
+" Vim under cygwin
+set backspace=indent,eol,start
