@@ -1,0 +1,49 @@
+# Custom bashrc file
+# Install via echo "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" >> ~/.bashrc
+
+# Gentoo style window titles in X, ripped from a gentoo /etc/bash/bashrc
+case ${TERM} in
+	xterm*|rxvt*|Eterm|aterm|kterm|gnome*|interix)
+		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
+		;;
+	screen)
+		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\033\\"'
+		;;
+esac
+
+# Gentoo style PS1 with a newline at the end, ripped from a gentoo /etc/bash/bashrc.
+if [[ ${EUID} == 0 ]]
+then
+	PS1='\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] \n'
+else
+	PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] \n'
+fi
+
+# Load dir_colors file, ripped from gentoo /etc/bash/bashrc.
+# if type -P dircolors>/dev/null
+#then
+#	if [[ -f ~/.dir_colors ]]
+#	then
+#		eval $(dircolors -b ~/.dir_colors)
+#	else [[ -f /etc/DIR_COLORS ]]
+#		eval $(dircolors -b /etc/DIR_COLORS)
+#	fi
+#fi
+
+# Load ~/.bash/bashrc if it exists.
+[[ -f ~/.bash/bashrc ]] && . ~/.bash/bashrc
+
+# Load ~/.dotfiles/bash/paths
+[[ -f ~/.dotfiles/bash/paths ]] && . ~/.dotfiles/bash/paths
+# Load paths from ~/.bash/paths if it exists.
+[[ -f ~/.bash/paths ]] && . ~/.bash/paths
+
+# Load ~/.dotfiles/bash/functions
+[[ -f ~/.dotfiles/bash/functions ]] && . ~/.dotfiles/bash/functions
+# Load functions from ~/.bash/functions if it exists.
+[[ -f ~/.bash/functions ]] && . ~/.bash/functions
+
+# Load ~/.dotfiles/bash/aliases
+[[ -f ~/.dotfiles/bash/aliases ]] && . ~/.dotfiles/bash/aliases
+# Load aliases from ~/.bash/aliases if it exists.
+[[ -f ~/.bash/aliases ]] && . ~/.bash/aliases
