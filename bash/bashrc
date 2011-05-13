@@ -30,9 +30,6 @@ fi
 #	fi
 #fi
 
-# Load ~/.bash/bashrc if it exists.
-[[ -f ~/.bash/bashrc ]] && . ~/.bash/bashrc
-
 # Load ~/.dotfiles/bash/paths
 [[ -f ~/.dotfiles/bash/paths ]] && . ~/.dotfiles/bash/paths
 # Load paths from ~/.bash/paths if it exists.
@@ -47,3 +44,6 @@ fi
 [[ -f ~/.dotfiles/bash/aliases ]] && . ~/.dotfiles/bash/aliases
 # Load aliases from ~/.bash/aliases if it exists.
 [[ -f ~/.bash/aliases ]] && . ~/.bash/aliases
+
+# Load ~/.bash/bashrc if it exists.
+[[ -f ~/.bash/bashrc ]] && . ~/.bash/bashrc

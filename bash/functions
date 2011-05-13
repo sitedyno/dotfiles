@@ -1,0 +1,20 @@
+# Bash functions
+
+# Uses ssh-add to check for a running ssh-agent.
+# Exit status 2 means ssh-add couldn't connect to ssh-agent.
+# 
+function check-agent {
+	ssh-add -l > /dev/null 2>&1
+	if [ $? = 2 ]
+	then
+		ssh-agent -a $SSH_AUTH_SOCK > /tmp/.ssh-agent.script
+		. /tmp/.ssh-agent.script > /dev/null 2>&1
+		echo $SSH_AGENT_PID > /tmp/.ssh-agent.pid
+		ssh-add
+	fi
+}
+
+function kill-agent {
+	pid = `cat /tmp/.ssh-agent.pid`
+	kill $pid
+}
