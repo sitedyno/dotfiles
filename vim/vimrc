@@ -11,6 +11,9 @@ set number
 
 " set the colorscheme
 colorscheme desertEx-cb
+"set background=dark
+"let g:solarized_termcolors=256
+"colorscheme solarized
 
 " filetype detection
 if has("autocmd")
