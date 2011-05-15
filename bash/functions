@@ -7,6 +7,8 @@ function check-agent {
 	ssh-add -l > /dev/null 2>&1
 	if [ $? = 2 ]
 	then
+		# remove any cruft from last time before starting
+		rm /tmp/.ssh-agent.*
 		ssh-agent -a $SSH_AUTH_SOCK > /tmp/.ssh-agent.script
 		. /tmp/.ssh-agent.script > /dev/null 2>&1
 		echo $SSH_AGENT_PID > /tmp/.ssh-agent.pid
