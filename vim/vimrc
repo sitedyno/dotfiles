@@ -3,9 +3,6 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-" display line numbers
-set number
-
 " set the mapleader key
 " let mapleader = "\\"
 
@@ -21,7 +18,8 @@ if has("autocmd")
 	autocmd BufEnter * :syntax sync fromstart
 endif
 
-" Vim under cygwin
-set backspace=indent,eol,start
+set backspace=indent,eol,start	" Vim under cygin
+set number	" display line numbers
+set hlsearch	" highlight search matches
 syntax on
 
