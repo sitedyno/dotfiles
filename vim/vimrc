@@ -21,8 +21,20 @@ endif
 set backspace=indent,eol,start	" Vim under cygin
 set number	" display line numbers
 set hlsearch	" highlight search matches
-syntax on
+set shm=atI	" Disable welcome screen
+set ttyfast	" Improves redrawing for newer computers
+set nobk nowb noswf	" Disable backup files
+set titlestring=%f title	" Display filename in term window
+set ruf=%l:%c ruler	" Display column:line bottom right of status line
+set showcmd	" Show incomplete command
+set ignorecase smartcase	" Only be case sensitive when search has uppercase letters
+set mouse=a	" Enable mouse support
+set enc=utf-8	" Enable utf support
 
 " NERDTree settings
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\~$', '\.svn$', '\.git$', '\.swp$']
+
+" Disable supertab for now
+let complType=""
+syntax on
