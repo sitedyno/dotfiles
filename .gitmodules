@@ -28,3 +28,6 @@
 [submodule "vim/bundle/repeat"]
 	path = vim/bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "vim/bundle/snipmmate"]
+	path = vim/bundle/snipmmate
+	url = https://github.com/msanders/snipmate.vim.git
