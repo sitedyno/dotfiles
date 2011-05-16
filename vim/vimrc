@@ -23,3 +23,6 @@ set number	" display line numbers
 set hlsearch	" highlight search matches
 syntax on
 
+" NERDTree settings
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\~$', '\.svn$', '\.git$', '\.swp$']
