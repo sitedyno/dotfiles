@@ -19,5 +19,8 @@ alias lsa='ls -hAF --color=auto'
 alias lsl='ls -hlAF --color=auto --time-style="+%Y-%m-%d %H:%M:%S"'
 alias lst='ls -hlrtAF --color=auto --time-style="+%Y-%m-%d %H:%M:%S"'
 
+# Search
+alias fs='ls -hlAF --color=auto --time-style="+%Y-%m-%d %H:%M:%S" | grep -i'
+
 # Reload
 alias dotRefresh='. ~/.dotfiles/bash/bashrc'

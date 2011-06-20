@@ -42,6 +42,7 @@ config/app_paths.php
 config/app_permissions.php
 config/database.php
 tmp/*
+cake_core_*
 
 # Komodo #
 ##########
