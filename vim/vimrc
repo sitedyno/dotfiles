@@ -29,6 +29,7 @@ set ruf=%l:%c ruler	" Display column:line bottom right of status line
 set showcmd	" Show incomplete command
 set ignorecase smartcase	" Only be case sensitive when search has uppercase letters
 set mouse=a	" Enable mouse support
+set ttymouse=xterm2	" define mouse support type
 set enc=utf-8	" Enable utf support
 
 " NERDTree settings
