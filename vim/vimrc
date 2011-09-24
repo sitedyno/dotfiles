@@ -18,6 +18,15 @@ if has("autocmd")
 	autocmd BufEnter * :syntax sync fromstart
 endif
 
+" NERDTree settings
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\~$', '\.svn$', '\.git$', '\.swp$']
+
+" Disable supertab for now
+let complType=""
+syntax on
+
+" Settings
 set backspace=indent,eol,start	" Vim under cygin
 set number	" display line numbers
 set hlsearch	" highlight search matches
@@ -31,11 +40,11 @@ set ignorecase smartcase	" Only be case sensitive when search has uppercase lett
 set mouse=a	" Enable mouse support
 set ttymouse=xterm2	" define mouse support type
 set enc=utf-8	" Enable utf support
+set showmatch matchtime=3	" Cursor briefly returns to matching bracket
+set makeprg=php\ -l\ %	" Make php the default lint program
+set errorformat=%m\ in\ %f\ on\ line\ %l	" Error format
 
-" NERDTree settings
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\~$', '\.svn$', '\.git$', '\.swp$']
-
-" Disable supertab for now
-let complType=""
-syntax on
+let php_sql_query=1	" Hilight SQL syntax in strings
+let php_htmlInStrings=1	" Hilight HTML in strings
+let php_noShortTags=1	" Disable short tags
+let php_folding=1	" Enable Folding for classes and functions
