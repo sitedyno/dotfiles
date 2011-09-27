@@ -41,6 +41,7 @@ desktop.ini
 config/app_paths.php
 config/app_permissions.php
 config/database.php
+Config/paths.php
 tmp/*
 cake_core_*
 
