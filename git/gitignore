@@ -41,6 +41,7 @@ desktop.ini
 config/app_paths.php
 config/app_permissions.php
 config/database.php
+Config/database.php
 Config/paths.php
 tmp/*
 cake_core_*
@@ -59,18 +60,23 @@ nbproject
 ##############
 .svn
 
+# Vim #
+#######
+*.swn
+*.swo
+*.swp
+.netrwhist
+vim/.netrwhist
+doc/tags
+
 # Misc stuff #
 ##############
 *.diff
 *.err
 *.orig
 *.reg
-*.swo
-*.swp
 *.vi
 *~
 .cache
-.netrwhist
 .project
 .settings
-doc/tags
