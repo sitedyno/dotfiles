@@ -8,9 +8,6 @@ call pathogen#helptags()
 
 " set the colorscheme
 colorscheme desertEx-cb
-"set background=dark
-"let g:solarized_termcolors=256
-"colorscheme solarized
 
 " filetype detection
 if has("autocmd")
@@ -23,7 +20,9 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\~$', '\.svn$', '\.git$', '\.swp$']
 
 " Disable supertab for now
-let complType=""
+" let complType=""
+let g:SuperTabDefaultCompletionType="context"
+let g:SuperTabContextDefaultCompletionType="<c-x><c-o>"
 syntax on
 
 " Settings
@@ -43,6 +42,20 @@ set enc=utf-8	" Enable utf support
 set showmatch matchtime=3	" Cursor briefly returns to matching bracket
 set makeprg=php\ -l\ %	" Make php the default lint program
 set errorformat=%m\ in\ %f\ on\ line\ %l	" Error format
+set list	" Display invisible characters
+set listchars=tab:»\ ,trail:·	" Define which invisible characters are displayed
+
+" Statusline
+set statusline=%f
+set statusline+=\ %{&ff}
+set statusline+=\ %{&fenc}
+set statusline+=\ %y
+set statusline+=%h
+set statusline+=%r
+set statusline+=%m
+set statusline+=%{fugitive#statusline()}
+" Always display status
+set laststatus=2
 
 let php_sql_query=1	" Hilight SQL syntax in strings
 let php_htmlInStrings=1	" Hilight HTML in strings
