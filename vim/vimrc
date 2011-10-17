@@ -25,6 +25,8 @@ let g:SuperTabDefaultCompletionType="context"
 let g:SuperTabContextDefaultCompletionType="<c-x><c-o>"
 syntax on
 
+call pathogen#helptags()
+
 " Settings
 set backspace=indent,eol,start	" Vim under cygin
 set number	" display line numbers
