@@ -3,8 +3,8 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-" set the mapleader key
-" let mapleader = "\\"
+" Set the mapleader key
+let mapleader = ","
 
 " set the colorscheme
 colorscheme desertEx-cb
@@ -19,22 +19,22 @@ endif
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\~$', '\.svn$', '\.git$', '\.swp$']
 
-" Disable supertab for now
-" let complType=""
+" Enable supertab, use Ctrl+V-Tab to insert a tab
 let g:SuperTabDefaultCompletionType="context"
 let g:SuperTabContextDefaultCompletionType="<c-x><c-o>"
+
 syntax on
 
-call pathogen#helptags()
-
 " Settings
-set backspace=indent,eol,start	" Vim under cygin
+set backspace=indent,eol,start	" Vim under cygwin
 set number	" display line numbers
 set hlsearch	" highlight search matches
 set shm=atI	" Disable welcome screen
 set ttyfast	" Improves redrawing for newer computers
-set nobk nowb noswf	" Disable backup files
-set titlestring=%f title	" Display filename in term window
+" set nobk nowb noswf	" Disable backup files
+set backupdir=~/.tmp,/tmp	" Set directories for tmp files
+set directory=~/.tmp,/tmp
+set titlestring=vim\:\ %f title	" Display filename in term window
 set ruf=%l:%c ruler	" Display column:line bottom right of status line
 set showcmd	" Show incomplete command
 set ignorecase smartcase	" Only be case sensitive when search has uppercase letters
@@ -46,6 +46,11 @@ set makeprg=php\ -l\ %	" Make php the default lint program
 set errorformat=%m\ in\ %f\ on\ line\ %l	" Error format
 set list	" Display invisible characters
 set listchars=tab:»\ ,trail:·	" Define which invisible characters are displayed
+set hidden
+" command mode completion (kinda irrelavant w/ command-t)
+set wildmenu	" Show all completion options
+set wildmode=list:longest	" More shell like completion
+set smartindent
 
 " Statusline
 set statusline=%f
@@ -59,7 +64,14 @@ set statusline+=%{fugitive#statusline()}
 " Always display status
 set laststatus=2
 
+" Ctags
+map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+map <C-\> :tnext<CR>
+map <Leader>t :TlistToggle<CR>
+let tlist_php_settings='php;c:class;d:constant;f:function'
+
 let php_sql_query=1	" Hilight SQL syntax in strings
 let php_htmlInStrings=1	" Hilight HTML in strings
 let php_noShortTags=1	" Disable short tags
 let php_folding=1	" Enable Folding for classes and functions
+let php_baselib=1	" Hilight base library methods
