@@ -34,3 +34,6 @@
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
 	url = git://github.com/wincent/Command-T.git
+[submodule "vim/bundle/taglist"]
+	path = vim/bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim.git
