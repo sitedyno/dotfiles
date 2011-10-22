@@ -69,6 +69,7 @@ map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
 map <Leader>t :TlistToggle<CR>
 let tlist_php_settings='php;c:class;d:constant;f:function'
+let tlist_css_settings='css;c:class;i:id;s:selector'
 
 let php_sql_query=1	" Hilight SQL syntax in strings
 let php_htmlInStrings=1	" Hilight HTML in strings
