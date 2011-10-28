@@ -24,6 +24,9 @@ let g:SuperTabDefaultCompletionType="context"
 let g:SuperTabContextDefaultCompletionType="<c-x><c-o>"
 
 syntax on
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+let g:csslint_rules="errors"
 
 " Settings
 set backspace=indent,eol,start	" Vim under cygwin
@@ -61,6 +64,9 @@ set statusline+=%h
 set statusline+=%r
 set statusline+=%m
 set statusline+=%{fugitive#statusline()}
+set statusline+=\ %#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 " Always display status
 set laststatus=2
 
