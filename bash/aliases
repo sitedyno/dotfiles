@@ -6,7 +6,7 @@ alias du='du -h'
 alias du1='du -h --max-depth=1'
 
 # Grep
-alias grep='grep --color'
+alias grep='grep -i --color'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grepcount='grep -c --color'
