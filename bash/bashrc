@@ -27,7 +27,7 @@ if [ "`type -t __git_ps1`" = 'function' ]; then
 	PS1="${PS1}\[\033[01;32m\]${PSGIT}"
 fi
 
-PS1="${PS1}\[\033[01;34m\]\$\[\033[00m\]\n"
+PS1="${PS1}\[\033[01;34m\]\n\$\[\033[00m\] "
 
 # Load ~/.dotfiles/bash/paths
 [[ -f ~/.dotfiles/bash/paths ]] && . ~/.dotfiles/bash/paths
