@@ -35,8 +35,8 @@ set hlsearch	" highlight search matches
 set shm=atI	" Disable welcome screen
 set ttyfast	" Improves redrawing for newer computers
 " set nobk nowb noswf	" Disable backup files
-set backupdir=~/.tmp,/tmp	" Set directories for tmp files
-set directory=~/.tmp,/tmp
+set backupdir=~/.tmp//,/tmp//	" Set directories for tmp files
+set directory=~/.tmp//,/tmp//
 set titlestring=vim\:\ %f title	" Display filename in term window
 set ruf=%l:%c ruler	" Display column:line bottom right of status line
 set showcmd	" Show incomplete command
