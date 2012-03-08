@@ -27,6 +27,8 @@ syntax on
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:csslint_rules="errors"
+let g:syntastic_cpp_include_dirs = [ '/user/include/node', 'includes', 'headers' ]
+" let g:syntastic_cpp_remove_include_errors = 1
 
 " Settings
 set backspace=indent,eol,start	" Vim under cygwin
