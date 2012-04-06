@@ -20,8 +20,8 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\~$', '\.svn$', '\.git$', '\.swp$']
 
 " Enable supertab, use Ctrl+V-Tab to insert a tab
-let g:SuperTabDefaultCompletionType="context"
-let g:SuperTabContextDefaultCompletionType="<c-x><c-o>"
+"let g:SuperTabDefaultCompletionType="context"
+"let g:SuperTabContextDefaultCompletionType="<c-x><c-o>"
 
 syntax on
 let g:syntastic_enable_signs=1
