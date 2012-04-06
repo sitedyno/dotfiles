@@ -27,7 +27,7 @@ syntax on
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:csslint_rules="errors"
-let g:syntastic_cpp_include_dirs = [ '/user/include/node', 'includes', 'headers' ]
+let g:syntastic_cpp_include_dirs = [ '/usr/include/node', '/usr/include', 'includes', 'headers' ]
 " let g:syntastic_cpp_remove_include_errors = 1
 
 " Settings
@@ -84,3 +84,6 @@ let php_htmlInStrings=1	" Hilight HTML in strings
 let php_noShortTags=1	" Disable short tags
 let php_folding=1	" Enable Folding for classes and functions
 let php_baselib=1	" Hilight base library methods
+
+" set fieltype for waf build scripts (wscript)
+au BufRead,BufNewfile wscript set filetype=python
