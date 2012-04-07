@@ -31,3 +31,6 @@
 [submodule "vim/bundle/session"]
 	path = vim/bundle/session
 	url = https://github.com/xolox/vim-session.git
+[submodule "vim/bundle/phpcomplete"]
+	path = vim/bundle/phpcomplete
+	url = https://github.com/shawncplus/phpcomplete.vim.git

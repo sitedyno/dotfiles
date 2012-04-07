@@ -73,7 +73,8 @@ set statusline+=%*
 set laststatus=2
 
 " Ctags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+set tags=./.git/tags,tags,~/www/.vendors/cakephp/2.x.x/.git/tags
+map <Leader>rt :!ctags -f .git/tags<CR><CR>
 map <C-\> :tnext<CR>
 map <Leader>t :TlistToggle<CR>
 let tlist_php_settings='php;c:class;d:constant;f:function'
@@ -87,3 +88,17 @@ let php_baselib=1	" Hilight base library methods
 
 " set fieltype for waf build scripts (wscript)
 au BufRead,BufNewfile wscript set filetype=python
+
+" load & reload vimrc
+map <leader>v :tabnew ~/.vimrc<CR><C-W>_
+map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+" Omni completion
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+
+" session settings
+let g:session_autosave='yes'
+let g:session_command_aliases=1
+
