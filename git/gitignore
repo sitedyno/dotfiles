@@ -67,6 +67,7 @@ nbproject
 *.swp
 .netrwhist
 tags
+vim/sessions/
 
 # Misc stuff #
 ##############
