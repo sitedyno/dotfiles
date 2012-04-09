@@ -34,3 +34,6 @@
 [submodule "vim/bundle/phpcomplete"]
 	path = vim/bundle/phpcomplete
 	url = https://github.com/shawncplus/phpcomplete.vim.git
+[submodule "vim/bundle/zoomwin"]
+	path = vim/bundle/zoomwin
+	url = https://github.com/vim-scripts/ZoomWin.git
