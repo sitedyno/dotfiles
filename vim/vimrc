@@ -12,7 +12,7 @@ let mapleader = ","
 if has("gui_running")
 	colorscheme wombat256
 else
-	colorscheme wombat
+	colorscheme ir_black
 endif
 
 " filetype detection
