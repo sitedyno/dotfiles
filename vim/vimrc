@@ -9,7 +9,11 @@ let g:CSApprox_verbose_level=0
 let mapleader = ","
 
 " set the colorscheme
-colorscheme desertEx-cb
+if has("gui_running")
+	colorscheme wombat256
+else
+	colorscheme wombat
+endif
 
 " filetype detection
 if has("autocmd")
