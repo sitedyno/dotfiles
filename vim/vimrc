@@ -9,8 +9,8 @@ let g:CSApprox_verbose_level=0
 let mapleader = ","
 
 " set the colorscheme
-if has("gui_running")
-	colorscheme wombat256
+if has("gui")
+	colorscheme wombat256-cb
 else
 	colorscheme ir_black
 endif
@@ -24,6 +24,8 @@ endif
 " NERDTree settings
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\~$', '\.svn$', '\.git$', '\.swp$']
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd w
 
 " Enable supertab, use Ctrl+V-Tab to insert a tab
 "let g:SuperTabDefaultCompletionType="context"
