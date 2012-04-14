@@ -24,8 +24,13 @@ endif
 " NERDTree settings
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\~$', '\.svn$', '\.git$', '\.swp$']
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd w
+" autocmd VimEnter * NERDTree
+" autocmd VimEnter * wincmd aw
+
+" nerdtree-tabs
+let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_loaded=1	" disables the plugin
+let g:nerdtree_allow_multi_nerdtree=1
 
 " Enable supertab, use Ctrl+V-Tab to insert a tab
 "let g:SuperTabDefaultCompletionType="context"
