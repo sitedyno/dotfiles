@@ -20,7 +20,7 @@ alias lsl='ls -hlAF --color=auto --time-style="+%Y-%m-%d %H:%M:%S"'
 alias lst='ls -hlrtAF --color=auto --time-style="+%Y-%m-%d %H:%M:%S"'
 
 # Search
-alias fs='ls -hlAF --color=auto --time-style="+%Y-%m-%d %H:%M:%S" | grep -i'
+alias fs='ls -hlAFR --color=auto --time-style="+%Y-%m-%d %H:%M:%S" | grep -i'
 
 # tmux
 alias tmux.default='~/.dotfiles/tmux/sessions/default.sh'
