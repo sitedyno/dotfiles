@@ -10,7 +10,8 @@ let mapleader = ","
 
 " set the colorscheme
 if has("gui")
-	colorscheme wombat256-cb
+"	colorscheme wombat256-cb
+	colorscheme ir_black
 else
 	colorscheme ir_black
 endif
