@@ -41,6 +41,7 @@ syntax on
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:csslint_rules="errors"
+let g:syntastic_phpcs_conf = "--standard=CakePHP"
 let g:syntastic_cpp_include_dirs = [ '/usr/include/node', '/usr/include', 'includes', 'headers' ]
 " let g:syntastic_cpp_remove_include_errors = 1
 
@@ -72,19 +73,28 @@ set wildmode=list:longest	" More shell like completion
 set smartindent
 
 " Statusline
-set statusline=%f
-set statusline+=\ %{&ff}
-set statusline+=\ %{&fenc}
-set statusline+=\ %y
-set statusline+=%h
-set statusline+=%r
-set statusline+=%m
-set statusline+=%{fugitive#statusline()}
-set statusline+=\ %#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline=File:
+"set statusline+=%-25.25f	" filename
+"set statusline+=Linefeeds:
+"set statusline+=%-6.6{&ff}	" fileformat unix
+"set statusline+=Encoding:
+"set statusline+=%-8.8{&fenc}	" encoding utf-8
+"set statusline+=Syntax:
+"set statusline+=%-6.6y	" content type [vim]
+"set statusline+=%h	" help
+"set statusline+=RO?:
+"set statusline+=%r\ 	" read only
+"set statusline+=Modified?:
+"set statusline+=%m	" modified
+"set statusline+=%{fugitive#statusline()}	" fugitive
+"set statusline+=
+"set statusline+=%{SyntasticStatuslineFlag()}	" syntastic
+"set statusline+=%*	" reset formatting
 " Always display status
 set laststatus=2
+set nocompatible
+set encoding=utf-8
+let g:Powerline_symbols='fancy'
 
 " Ctags
 set tags=./.git/tags,tags,~/www/.vendors/cakephp/2.x.x/.git/tags
@@ -116,3 +126,5 @@ autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 let g:session_autosave='yes'
 let g:session_command_aliases=1
 
+set colorcolumn=80,120	" column markers
+set shortmess+=I	" hide welcome screen
