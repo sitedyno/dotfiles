@@ -126,5 +126,9 @@ autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 let g:session_autosave='yes'
 let g:session_command_aliases=1
 
-set colorcolumn=80,120	" column markers
+if exists('+colorcolumn')
+	set colorcolumn=80,120	"column markers
+else
+	au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
 set shortmess+=I	" hide welcome screen
