@@ -1,29 +1,26 @@
 Installation:
 ============
+
 Grab the repo
 -------------
+
 	git clone git://github.com/sitedyno/dotfiles.git .dotfiles
 
-Update git submodules
----------------------
+Install via convenient install script
+-------------------------------------
 
-	cd .dotfiles
-	git submodule init
-	git submodule update
+	. ~/.dotfiles/install/all.sh
 
-Create symlinks:
-----------------
-	ln -s ~/.dotfiles/git/gitignore ~/.gitignore
-	ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
-	ln -s ~/.dotfiles/vim ~/.vim
-	ln -s ~/.dotfiles/vim/gvimrc ~/.gvimrc
+Install individual bits. Source whichever you like:
+---------------------------------------------------
 
-Update git config:
-------------------
-	git config --global core.excludesfile ~/.gitignore
-	git config --global color.ui "auto"
+	. ~/.dotfiles/install/bash.sh
+	. ~/.dotfiles/install/git.sh
+	. ~/.dotfiles/install/tmux.sh
+	. ~/.dotfiles/install/vim.sh
 
-Git builds ctags:
------------------
+Want git to build ctags?
+------------------------
+
 	git config --global init.templatedir '~/.dotfiles/git/template'
 	Then in any existing git repo where you want this to work simply do: git init
