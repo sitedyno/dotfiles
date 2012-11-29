@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo
+echo "Running fonts .dotfiles install script..."
+echo
+
 fontdir="$HOME/.fonts"
 DSMPttfLink="https://gist.github.com/raw/2324335/fafb79037ecbdd1b61ebbc512b9f5ab631a93f3b/DroidSansMono-Powerline.ttf"
 DSMDPttfLink="https://gist.github.com/raw/2324335/3f941e9b09bafdc2df960f1dd5609de0eb03533d/DroidSansMonoDotted-Powerline.ttf"

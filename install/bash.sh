@@ -6,12 +6,18 @@ echo
 
 if [[ ${EUID} == 0 ]]
 then
-	if [[ -f ~/.bashrc ]]
+	if [[ -f /root/.bashrc ]]
 	then
-		echo "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" >> ~/.bashrc
-	elif [[ -f ~/.profile ]]
+		if grep -Fxq "[[ -f ~/.dotfiles/bash/bashrc ]] && ~/.dotfiles/bash/bashrc" /roob/.bashrc
+		then
+			echo "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" >> /root/.bashrc
+		fi
+	elif [[ -f /root/.profile ]]
 	then
-		echo "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" >> ~/.profile
+		if grep -Fxq "[[ -f ~/.dotfiles/bash/bashrc ]] && ~/.dotfiles/bash/bashrc" /roob/.profile
+		then
+			echo "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" >> /root/.profile
+		fi
 	else
 		echo "File not found."
 		exit 1
@@ -19,7 +25,10 @@ then
 else
 	if [[ -f ~/.bashrc ]]
 	then
-		echo "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" >> ~/.bashrc
+		if grep -Fxq "[[ -f ~/.dotfiles/bash/bashrc ]] && ~/.dotfiles/bash/bashrc" ~/.bashrc
+		then
+			echo "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" >> ~/.bashrc
+		fi
 	else
 		echo "File not found."
 		exit 1
