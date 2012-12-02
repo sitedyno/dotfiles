@@ -8,13 +8,13 @@ if [[ ${EUID} == 0 ]]
 then
 	if [[ -f /root/.bashrc ]]
 	then
-		if ! grep -Fxq "[[ -f ~/.dotfiles/bash/bashrc ]] && ~/.dotfiles/bash/bashrc" /root/.bashrc
+		if ! grep -q "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" /root/.bashrc
 		then
 			echo "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" >> /root/.bashrc
 		fi
 	elif [[ -f /root/.profile ]]
 	then
-		if ! grep -Fxq "[[ -f ~/.dotfiles/bash/bashrc ]] && ~/.dotfiles/bash/bashrc" /root/.profile
+		if ! grep -q "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" /root/.profile
 		then
 			echo "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" >> /root/.profile
 		fi
@@ -25,7 +25,7 @@ then
 else
 	if [[ -f ~/.bashrc ]]
 	then
-		if ! grep -Fxq "[[ -f ~/.dotfiles/bash/bashrc ]] && ~/.dotfiles/bash/bashrc" ~/.bashrc
+		if ! grep -q "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" ~/.bashrc
 		then
 			echo "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" >> ~/.bashrc
 		fi
