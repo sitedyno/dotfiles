@@ -39,7 +39,8 @@ let g:nerdtree_allow_multi_nerdtree=1
 
 syntax on
 let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=2
+let g:syntastic_loc_list_height=3
 let g:csslint_rules="errors"
 let g:syntastic_phpcs_conf = "--standard=CakePHP"
 let g:syntastic_cpp_include_dirs = [ '/usr/include/node', '/usr/include', 'includes', 'headers' ]
