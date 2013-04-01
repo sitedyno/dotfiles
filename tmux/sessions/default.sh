@@ -16,8 +16,8 @@ tmux -2 new-session -ds $session
 tmux new-window -t $session:0 -k -n root "su -"
 
 # irc...
-tmux new-window -t $session:1 -n irc weechat-curses
-#tmux new-window -t $session:1 -n bash bash
+#tmux new-window -t $session:1 -n irc weechat-curses
+tmux new-window -t $session:1 -n bash bash
 tmux split-window -v -t $session:1 bash
 tmux resize-pane -D -t $session:1.1 100
 
