@@ -72,6 +72,7 @@ set hidden
 set wildmenu	" Show all completion options
 set wildmode=list:longest	" More shell like completion
 set smartindent
+set nofoldenable	" Don't fold by default
 
 " Statusline
 "set statusline=File:
@@ -111,7 +112,7 @@ let php_noShortTags=1	" Disable short tags
 let php_folding=1	" Enable Folding for classes and functions
 let php_baselib=1	" Hilight base library methods
 
-" set fieltype for waf build scripts (wscript)
+" set filetype for waf build scripts (wscript)
 au BufRead,BufNewfile wscript set filetype=python
 
 " load & reload vimrc

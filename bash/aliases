@@ -4,6 +4,9 @@
 alias df='df -h'
 alias du='du -h'
 alias du1='du -h --max-depth=1'
+alias filecount='ls -l | grep ^- | wc -l'
+alias dircount='ls -l | grep ^d | wc -l'
+alias symcount='ls -l | grep ^l | wc -l'
 
 # Grep
 alias grep='grep -i --color'
