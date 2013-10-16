@@ -134,3 +134,7 @@ else
 	au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 set shortmess+=I	" hide welcome screen
+
+" python stuff http://www.python.org/dev/peps/pep-0008/
+au FileType python setl softtabstop=4 shiftwidth=4 tabstop=4 textwidth=90 expandtab
+au FileType rst setl textwidth=80
