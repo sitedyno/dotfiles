@@ -29,7 +29,7 @@ alias fs='ls -hlAFR --color=auto --time-style="+%Y-%m-%d %H:%M:%S" | grep -i'
 alias tmux.default='~/.dotfiles/tmux/sessions/default.sh'
 
 # weechat (via dtach)
-alias weechat='dtach -A /tmp/weechat -r winch weechat-curses'
+alias wechat='dtach -A /tmp/weechat -r winch weechat'
 
 # Reload
 alias dotRefresh='. ~/.dotfiles/bash/bashrc'
