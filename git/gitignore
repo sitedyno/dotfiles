@@ -36,6 +36,11 @@ Thumbs.db
 .directory
 desktop.ini
 
+# Composer #
+############
+composer.lock
+vendor/
+
 # CakePHP #
 ###########
 config/app_paths.php
