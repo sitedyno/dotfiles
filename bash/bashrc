@@ -16,6 +16,11 @@ PS1="${PS1}\[\033[01;34m\]\n\$\[\033[00m\] "
 # Load paths from ~/.bash/paths if it exists.
 [[ -f ~/.bash/paths ]] && . ~/.bash/paths
 
+# Load ~/.dotfiles/bash/env
+[[ -f ~/.dotfiles/bash/env ]] && . ~/.dotfiles/bash/env
+# Load ~/.bash/env if it exists
+[[ -f ~/.bash/env ]] && . ~/.bash/env
+
 # Load ~/.dotfiles/bash/functions
 [[ -f ~/.dotfiles/bash/functions ]] && . ~/.dotfiles/bash/functions
 # Load functions from ~/.bash/functions if it exists.
