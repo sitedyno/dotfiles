@@ -49,9 +49,6 @@
 [submodule "git/supp"]
 	path = git/supp
 	url = git://github.com/mikegerwitz/git-supp.git
-[submodule "vim/bundle/Conflict2Diff"]
-	path = vim/bundle/Conflict2Diff
-	url = git@github.com:vim-scripts/Conflict2Diff.git
 [submodule "vim/bundle/editorconfig-vim"]
 	path = vim/bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
