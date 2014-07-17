@@ -25,6 +25,11 @@ alias lst='ls -hlrtAF --color=auto --time-style="+%Y-%m-%d %H:%M:%S"'
 # Search
 alias fs='ls -hlAFR --color=auto --time-style="+%Y-%m-%d %H:%M:%S" | grep -i'
 
+# tar
+alias untar='tar xvf'
+alias untargz='tar xvfz'
+alias untarbz='tar xvfj'
+
 # tmux
 alias tmux.default='~/.dotfiles/tmux/sessions/default.sh'
 
