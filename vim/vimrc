@@ -127,6 +127,7 @@ autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 " session settings
 let g:session_autosave='yes'
 let g:session_command_aliases=1
+let g:session_autoload = 'no'
 
 if exists('+colorcolumn')
 	set colorcolumn=80,120	"column markers
