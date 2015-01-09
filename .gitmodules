@@ -79,3 +79,6 @@
 [submodule "vim/bundle/csapprox"]
 	path = vim/bundle/csapprox
 	url = https://github.com/vim-scripts/CSApprox.git
+[submodule "vim/bundle/fist"]
+	path = vim/bundle/fist
+	url = https://github.com/ajh17/vim-fist.git
