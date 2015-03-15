@@ -1,6 +1,12 @@
 # Custom bashrc file
 # Install via echo "[[ -f ~/.dotfiles/bash/bashrc ]] && . ~/.dotfiles/bash/bashrc" >> ~/.bashrc
 
+HISTTIMEFORMAT="%m-%d %T - "
+HISTSIZE=5000
+HISTFILESIZE=5000
+shopt -s histappend
+shopt -s histverify
+
 if [[ ${EUID} == 0 ]]
 then
 	PS1="\[\033[01;31m\]"
