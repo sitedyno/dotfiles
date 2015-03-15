@@ -73,6 +73,7 @@ nbproject
 .netrwhist
 tags
 vim/sessions/
+.phpcomplete_extended
 
 # Misc stuff #
 ##############

@@ -82,3 +82,15 @@
 [submodule "vim/bundle/fist"]
 	path = vim/bundle/fist
 	url = https://github.com/ajh17/vim-fist.git
+[submodule "vim/bundle/vimproc"]
+	path = vim/bundle/vimproc
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "vim/bundle/unite"]
+	path = vim/bundle/unite
+	url = https://github.com/Shougo/unite.vim.git
+[submodule "vim/bundle/phpcomplete-extended"]
+	path = vim/bundle/phpcomplete-extended
+	url = https://github.com/m2mdas/phpcomplete-extended.git
+[submodule "vim/bundle/paulyg-php-syntax"]
+	path = vim/bundle/paulyg-php-syntax
+	url = https://github.com/paulyg/Vim-PHP-Stuff.git

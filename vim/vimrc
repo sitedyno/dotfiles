@@ -24,7 +24,7 @@ endif
 
 " NERDTree settings
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\~$', '\.svn$', '\.git$', '\.swp$']
+let NERDTreeIgnore=['\~$', '\.svn$', '\.git$', '\.swp$', '\.phpcomplete_extended$']
 " autocmd VimEnter * NERDTree
 " autocmd VimEnter * wincmd aw
 
@@ -122,7 +122,8 @@ map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimr
 " Omni completion
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
+autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
+let g:phpcomplete_index_composer_command='composer'
 
 " session settings
 let g:session_autosave='yes'
