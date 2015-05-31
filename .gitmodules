@@ -26,10 +26,6 @@
 	path = vim/bundle/snipmmate
 	url = https://github.com/msanders/snipmate.vim.git
 	ignore = dirty
-[submodule "vim/bundle/command-t"]
-	path = vim/bundle/command-t
-	url = git://github.com/wincent/Command-T.git
-	ignore = dirty
 [submodule "vim/bundle/taglist"]
 	path = vim/bundle/taglist
 	url = git://github.com/vim-scripts/taglist.vim.git
