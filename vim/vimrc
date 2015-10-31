@@ -1,6 +1,6 @@
 " load pathogen
 filetype off
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 
 let g:CSApprox_verbose_level=0
