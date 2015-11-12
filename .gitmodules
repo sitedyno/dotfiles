@@ -86,3 +86,6 @@
 [submodule "vim/bundle/paulyg-php-syntax"]
 	path = vim/bundle/paulyg-php-syntax
 	url = https://github.com/paulyg/Vim-PHP-Stuff.git
+[submodule "vim/bundle/nerdtree-tabs"]
+	path = vim/bundle/nerdtree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs.git
