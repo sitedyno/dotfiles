@@ -29,7 +29,7 @@ let NERDTreeIgnore=['\~$', '\.svn$', '\.git$', '\.swp$', '\.phpcomplete_extended
 " autocmd VimEnter * wincmd aw
 
 " nerdtree-tabs
-"let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_open_on_console_startup=1
 "let g:nerdtree_tabs_loaded=1	" disables the plugin
 "let g:nerdtree_allow_multi_nerdtree=1
 
