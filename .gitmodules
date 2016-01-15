@@ -89,6 +89,3 @@
 [submodule "vim/bundle/nerdtree-tabs"]
 	path = vim/bundle/nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
-[submodule "vim/bundle/irblack"]
-	path = vim/bundle/irblack
-	url = https://github.com/wesgibbs/vim-irblack.git
